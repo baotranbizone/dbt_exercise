@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: dbt_btranquoc
+    database: lakehouse_bao
+    tables:
+      - name: jaffle_shop_customers
+      - name: jaffle_shop_orders
