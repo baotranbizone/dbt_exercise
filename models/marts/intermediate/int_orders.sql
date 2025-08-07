@@ -17,7 +17,7 @@ with
 
     ),
 
-    paid_orders as (
+    final as (
 
         select
             orders.order_id,
@@ -32,4 +32,5 @@ with
     )
 
 select *
-from paid_orders
+from final
+order by order_placed_at desc

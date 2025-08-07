@@ -37,24 +37,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_exercise:
     # Applies to all files under models/example/
-    example:
+    marts:
       +materialized: table
-
-seeds:
-  dbt_exercise:
-    quote_columns: false
-    column_types:
-      jaffle_shop_customers:
-        ID: integer
-        FIRST_NAME: string
-        LAST_NAME: string
-      jaffle_shop_orders:
-        ID: integer
-        USER_ID: integer
-        ORDER_DATE: date
-        STATUS: string 
-      stripe_payments:
-        ID: integer
-        ORDER_ID: integer
-        PAYMENT_METHOD: string
-        AMOUNT: decimal
+    staging:
+      +materialized: view
